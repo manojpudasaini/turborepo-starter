@@ -33,6 +33,12 @@ npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 
+.yarn
+
 # Misc
 .DS_Store
 *.pem
+
+storybook-static/
+
+awsexports.js
