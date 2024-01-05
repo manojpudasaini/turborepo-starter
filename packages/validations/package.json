@@ -1,0 +1,7 @@
+{
+  "name": "@repo/validations",
+  "version": "0.0.0",
+  "files": [
+    "index.ts"
+  ]
+}
