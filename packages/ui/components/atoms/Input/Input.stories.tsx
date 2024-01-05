@@ -19,6 +19,6 @@ export default meta;
 type Story = StoryObj<typeof InputField>;
 export const Primary: Story = {
   args: {
-    disabled: true,
+    disabled: false,
   },
 };
