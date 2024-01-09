@@ -1,5 +1,4 @@
 "use client";
-
 import { awsexports } from "../../../awsexports";
 import { Amplify } from "aws-amplify";
 
