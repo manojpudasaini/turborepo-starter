@@ -3,7 +3,11 @@ import type { Metadata } from "next";
 import { DM_Sans } from "next/font/google";
 const dmSans = DM_Sans({ subsets: ["latin"] });
 import ConfigureAmplifyClientSide from "../components/ConfigureAmplify";
-import Providers from "./providers";
+import Providers from "../providers";
+import { Amplify } from "aws-amplify";
+import { awsexports } from "../../../awsexports";
+
+Amplify.configure({ ...awsexports }, { ssr: true });
 
 export const metadata: Metadata = {
   title: "Cognito Auth",

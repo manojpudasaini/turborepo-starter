@@ -9,7 +9,9 @@
     "lint": "eslint . --max-warnings 0"
   },
   "dependencies": {
+    "@aws-amplify/adapter-nextjs": "^1.0.10",
     "@hookform/resolvers": "^3.3.4",
+    "@repo/services": "workspace:^",
     "@repo/ui": "*",
     "@repo/validations": "workspace:^",
     "@tanstack/react-query": "^5.17.1",
