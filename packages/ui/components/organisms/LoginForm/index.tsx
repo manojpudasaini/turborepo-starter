@@ -5,15 +5,15 @@ import {
   UseFormHandleSubmit,
   FieldErrors,
 } from "react-hook-form";
-import { ILoginFormValues } from "@repo/types";
 import { InputField } from "../..";
 import Button from "../../atoms/Button";
+import { TLoginSchema } from "@repo/validations";
 interface ILoginProps {
-  handleLogin: SubmitHandler<ILoginFormValues>;
-  control: Control<ILoginFormValues, any>;
-  handleSubmit: UseFormHandleSubmit<ILoginFormValues>;
-  errors: FieldErrors<ILoginFormValues>;
-  loading: boolean;
+  handleLogin: SubmitHandler<TLoginSchema>;
+  control: Control<TLoginSchema, any>;
+  handleSubmit: UseFormHandleSubmit<TLoginSchema>;
+  errors: FieldErrors<TLoginSchema>;
+  loading?: boolean;
 }
 
 function LoginForm({
@@ -29,15 +29,15 @@ function LoginForm({
       className="flex flex-col space-y-4"
     >
       <Controller
-        name="email"
+        name="username"
         control={control}
         render={({ field }) => (
           <InputField
-            name="Email Address"
+            name="username"
             field={field}
-            label="Email Address"
-            placeholder="your@email.com"
-            error={errors?.email?.message}
+            label="User name"
+            placeholder="Enter your username"
+            error={errors?.username?.message}
           />
         )}
       />
